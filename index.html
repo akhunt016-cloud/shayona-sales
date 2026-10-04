@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shayona Sales Computer</title>
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f4f6f9;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        }
+
+        .logo {
+            width: 280px;
+            max-width: 90%;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #1246a0;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .qr-section {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .qr-card {
+            width: 300px;
+            padding: 25px;
+            border-radius: 15px;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+
+        .qr-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .qr-card h2 {
+            color: #222;
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .qr {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #1246a0;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0b3478;
+        }
+
+        .instagram {
+            background: #d62976;
+        }
+
+        .instagram:hover {
+            background: #a91d5d;
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .qr-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LOGO -->
+        <img src="logo.jpeg" alt="Shayona Sales Computer" class="logo">
+
+        <h1>SHAYONA SALES COMPUTER</h1>
+
+        <p class="subtitle">
+            COMPUTERS • LAPTOPS • PRINTERS • ACCESSORIES
+        </p>
+
+        <div class="qr-section">
+
+            <!-- INSTAGRAM -->
+            <div class="qr-card">
+
+                <h2>📱 Follow Us on Instagram</h2>
+
+                <div class="qr" id="instagramQR"></div>
+
+                <a
+                    href="https://www.instagram.com/shayona_sales?stkn=anVjOGd0dzFvdWlu"
+                    target="_blank"
+                    class="btn instagram">
+                    Open Instagram
+                </a>
+
+            </div>
+
+
+            <!-- GOOGLE MAPS -->
+            <div class="qr-card">
+
+                <h2>📍 Visit Our Shop</h2>
+
+                <div class="qr" id="locationQR"></div>
+
+                <a
+                    href="https://maps.app.goo.gl/krNx5nSVNfbvpRQh9?g_st=ac"
+                    target="_blank"
+                    class="btn">
+                    Open Location
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Scan the QR Code to connect with us</p>
+            <p>© 2026 Shayona Sales Computer</p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Instagram QR Code
+        new QRCode(document.getElementById("instagramQR"), {
+            text: "https://www.instagram.com/shayona_sales?stkn=anVjOGd0dzFvdWlu",
+            width: 180,
+            height: 180
+        });
+
+
+        // Google Maps QR Code
+        new QRCode(document.getElementById("locationQR"), {
+            text: "https://maps.app.goo.gl/krNx5nSVNfbvpRQh9?g_st=ac",
+            width: 180,
+            height: 180
+        });
+
+    </script>
+
+</body>
+</html>
